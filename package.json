@@ -34,5 +34,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+  "@mate-academy/eslint-config-react-typescript": "^1.0.11",
+  "eslint": "^7.32.0",
+  "eslint-plugin-cypress": "^2.11.2",
+  "@mate-academy/students-ts-config": "*"
+}
 }
