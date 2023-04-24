@@ -1,6 +1,57 @@
-@import '../../styles/utils/vars.scss';
-@import '../../styles/blocks/logo.scss';
-@import '../../styles/blocks/nav.scss';
+@import '../../Styles/utils/vars';
+
+
+.logo {
+  display: block;
+  width: 80px;
+  height: 26px;
+  padding-left: 16px;
+  background-image: url(../../assets/icons/header/Logo--Name.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @media (min-width: 640px) {
+    padding-left: 24px;
+  }
+}
+
+.nav {
+  &__list {
+    display: none;
+
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: 640px) {
+        display: flex;
+        gap: 32px;
+      }
+    
+      @media (min-width: 1200px) {
+        gap: 64px;
+      }
+  }
+
+  &__item {
+    position: relative;
+    color: $color-secondary;
+    list-style: none;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
 
 .header {
   position: relative;
@@ -41,7 +92,7 @@
   height: 48px;
 
   background-color: #FFFFFF;
-  box-shadow: -1px 0px 0px $element-color;
+  box-shadow: -1px 0px 0px $color-element;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -54,32 +105,31 @@
     height: 48px;
 
     background-color: #FFFFFF;
-    box-shadow: -1px 0px 0px $element-color;
+    box-shadow: -1px 0px 0px $color-element;
 
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url('../../images/header/menu-icon.svg');
+    background-image: url('../../assets/icons/header/icon--menu.svg');
+    @media (min-width: 640px) {
+        display: none;
+      }
+  }
+
+
+  &--favorite-empty {
+    background-image: url(../../assets/icons/header/icon--favorite-empty.svg);
+  }
+
+  &--cart-empty {
+    background-image: url(../../assets/icons/header/icon--cart-empty.svg);
+  }
 
     @media (min-width: 640px) {
-      display: none;
+      display: inline-block;
     }
-  }
-
-
-  &--heart-like {
-    background-image: url(../../images/header/icon--heart-like.svg);
-  }
-
-  &--shopping-bag {
-    background-image: url(../../images/header/icon-Shopping-bag.svg);
-  }
-
-  @media (min-width: 640px) {
-    display: inline-block;
-  }
-
-  @media (min-width: 1200px) {
-    width: 64px;
-    height: 64px;
-  }
+  
+    @media (min-width: 1200px) {
+      width: 64px;
+      height: 64px;
+    }
 }

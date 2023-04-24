@@ -4,7 +4,7 @@ import './Header.scss';
 export const Header = () => {
   return (
     <header className="header" id="header">
-      <a className="logo" href="/"></a>
+      <a className="logo" href="/">{}</a>
 
       <nav className="nav">
         <ul className="nav__list">
@@ -35,10 +35,26 @@ export const Header = () => {
       </nav>
 
       <div className="header__icons">
-        <a className="icon icon--heart-like"></a>
-        <a className="icon icon--shopping-bag"></a>
-        <a className="icon--menu"></a>
+        <a
+          className="icon icon--favorite-empty"
+          href="favorite-empty-icon"
+        >
+          {}
+        </a>
+        <a
+          className="icon icon--cart-empty"
+          href="cart-empty-icon"
+        >
+          {}
+        </a>
+        <a
+          className="icon--menu"
+          href="icon--menu"
+        >
+          {}
+        </a>
       </div>
+
     </header>
   );
 };
